@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="/index.xhtml">
+	<ui:define name="conteudo">
+		<p>Teste -- pagina de teste sobre como listar dados do banco</p>
+
+
+		<h:dataTable value="${testeB.getLista()}" var="item" rules="rows">
+			<f:facet name="caption">Comentários relativos aos temas desenvolvidos
+               </f:facet>
+			<f:facet name="header">Listagem dos comentários</f:facet>
+			<f:facet name="footer">Fim da listagem</f:facet>
+			<h:column>
+				<f:facet name="header">Id</f:facet>
+				#{item.id}
+               </h:column>
+			<h:column>
+				<f:facet name="header">Nome</f:facet>
+				#{item.nome}
+               </h:column>
+			<h:column>
+				<f:facet name="header">Valor</f:facet>
+				#{item.valor}
+               </h:column>
+		</h:dataTable>
+	</ui:define>
+</ui:composition>
+</html>

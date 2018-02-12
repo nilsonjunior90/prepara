@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+  
+  <h:head>
+    
+  <link rel="StyleSheet" type="text/css" href="css/style.css" media="screen" />
+  <link rel="StyleSheet" type="text/css" href="css/normalize.css" media="screen" />
+  
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+  
+  <link rel="icon" 
+      type="image/png" 
+      href="images/icone_prepara.png" />
+      
+  <link rel="favicon" 
+      type="image/png" 
+      href="images/icone_prepara.png" /> 
+  
+  <title>Prepara Web</title>
+  </h:head>
+  <h:body>
+    <h:form id="form"><!-- Gambiarra para poder usar links -->
+      <table width="100%">
+        <tr>
+          <td colspan="2" align="center">
+            <ui:insert name="cabecalho">  
+            <h:graphicImage library="default" name="images/logo_prepara.png"/>
+            </ui:insert>
+          </td>
+        </tr>
+        <tr>
+          <td width="200px" valign="top">
+            <ui:insert name="menu">
+              <h1>Menu</h1>
+              <h:panelGrid columns="1">
+                <h:commandLink value="Inicio" action="index.xhtml"/>
+                <h:commandLink value="Dashboard" action="dashboard.xhtml"/>
+                <h:commandLink value="Teste" action="teste.xhtml"/>
+              </h:panelGrid>
+            </ui:insert>
+          </td>
+          <td>
+            <ui:insert name="conteudo">
+              <h1>Prepara Web</h1>
+              <p>texto...</p>
+            </ui:insert>
+          </td>
+        </tr>
+         <tr>
+          <td colspan="2" align="center">
+            <ui:insert name="rodape">  
+            <br/>
+              <p>rodape</p>
+            </ui:insert>
+          </td>
+        </tr>
+      </table>
+    </h:form>
+  </h:body>
+</html>
